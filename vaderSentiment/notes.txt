@@ -1,0 +1,8 @@
+Method:
+1) Remove non-English tweets from the dataset by dropping all rows in which tweet_lang != "en" (remove_non_english_tweets.py)
+2) Remove tweets in which latitude or longitude are equal to 0 or null (clean_file.py)
+3) Analyze the tweets using vader sentiment analysis. New columns added are vader_neg, vader_neu, vader_pos, vader_compound. The compound scores. Github: https://github.com/cjhutto/vaderSentiment (vaderSentiment.py)
+4) Analyze the tweets using NRC emotion analysis. New columns added are fear, anger, anticipation, trust, surprise, sadness, disgust, and joy. NRCLex: https://pypi.org/project/NRCLex/  (nrc_emotion.py)
+
+Running the code example:
+python remove_non_english_tweets.py tweets.csv english_tweets.csv
